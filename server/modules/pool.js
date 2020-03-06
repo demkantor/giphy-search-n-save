@@ -28,6 +28,8 @@ if (process.env.DATABASE_URL) {
   };
 } else {
   config = {
+    user: null || 'con',
+    password: null || 'secretpass',
     host: 'localhost', // Server hosting the postgres database
     port: 5432, // env var: PGPORT
     database: 'giphy_search_favorites', // change this line if you want to use a different database
