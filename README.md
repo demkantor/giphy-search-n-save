@@ -24,4 +24,4 @@ Feel free to follow the databse schema in database.sql file if you'd like to cod
 * node
 * postgres
 * giphy api key
--- run npm install for additonal tools such as redux and express
+* -- run npm install for additonal tools such as redux and express
