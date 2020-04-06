@@ -21,19 +21,19 @@ function* rootSaga() {
 
 function* addGiphy(giphy) {
     const searchResponse = yield Axios.get(`/api/search/${giphy.payload.search}`);
-    console.log("giphy payload", giphy.payload)
+    //console.log("giphy payload", giphy.payload)
     yield put({type: 'GIF_SEARCH', payload: searchResponse.data})
-    console.log('its snowing outside now', searchResponse.data)
+    //console.log('its snowing outside now', searchResponse.data)
 }
 
 function* getGiphy(){
     const gimmieGif = yield Axios.get('/api/favorite');
-    console.log('this saga came from favorite/GET bringing: ', gimmieGif.data)
+    //console.log('this saga came from favorite/GET bringing: ', gimmieGif.data)
     yield put({type: 'SET_FAV', payload: gimmieGif.data})
 }
 
 function* postGiphy(fav) {
-    console.log('in saga post', fav.payload);
+    //console.log('in saga post', fav.payload);
     try {
         yield Axios.post('/api/favorite', fav.payload);
         yield put({type: 'DISPLAY_FAV'})
@@ -43,7 +43,7 @@ function* postGiphy(fav) {
 }
 
 function* deleteGiphy(remove) {
-    console.log("in saga delete with: ", remove.payload);
+    //console.log("in saga delete with: ", remove.payload);
     try {
         yield Axios.delete(`/api/favorite/${remove.payload}`);
         yield put({type: 'DISPLAY_FAV'})
@@ -53,7 +53,7 @@ function* deleteGiphy(remove) {
 }
 
 function* putGiphy(edit) {
-  console.log("in saga PUT with: ", edit.payload.sendId);
+  //console.log("in saga PUT with: ", edit.payload.sendId);
   try {
     yield Axios.put(`/api/favorite/${edit.payload.sendId}`, edit.payload);
     yield put({ type: "DISPLAY_FAV" });
@@ -65,9 +65,7 @@ function* putGiphy(edit) {
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
 
-// This function (our reducer) will be called when an 
-// action is dipatched. state = ['Apple'] sets the default 
-// value of the array.
+
 const searchReducer = (state = {}, action) => {
     switch(action.type){
         case 'GIF_SEARCH':
@@ -86,7 +84,7 @@ const categoryReducer = (state = [], action) => {
     }
 }
 
-// Create one store that all components can use
+// Creates one store that all components can use
 const storeInstance = createStore(
     combineReducers({
         searchReducer,

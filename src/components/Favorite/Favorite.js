@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import swal from "sweetalert";
 
 class Favorite extends Component {
+  
   componentDidMount = () => {
     this.getMyGifs();
   };

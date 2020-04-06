@@ -41,21 +41,20 @@ h1, h2{
     color: white;
 }
 
-.favoriteLink {
-    float: left;
-}
 
 .favoriteLink:hover {
     background-color: #111;
-    font-size: larger;
+    font-size: medium;
 }
 
 .favoriteLink {
     display: block;
     background-color: #333;
     color: white;
-    padding: 14px 16px;
+    padding: 14px 14px;
     text-decoration: none;
+    float: left;
+    font-size: small;
 }
 
 .otherLinks {
@@ -134,12 +133,20 @@ img {
     .gif {
        max-width: calc(90% -  1em);
     }
+
+    .display {
+        width: 100vw;
+     }
 }
 
 @media screen and (min-width: 40em) {
     .gif {
        max-width: calc(50% -  1em);
     }
+
+    .display {
+        width: unset;
+     }
 }
 
 @media screen and (min-width: 60em) {

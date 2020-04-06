@@ -5,13 +5,6 @@ import swal from "sweetalert";
 
 
 class Cohort extends Component {
-  // componentDidMount = () => {
-  //   this.getMyGifs();
-  // };
-
-  // getMyGifs = () => {
-  //   this.props.dispatch({ type: "DISPLAY_FAV" });
-  // };
 
   deleteFav = remove => {
     this.props.dispatch({ type: "REMOVE_FAV", payload: remove });
