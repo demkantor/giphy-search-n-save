@@ -1,8 +1,8 @@
 # Giphy Search and Favorites
 
-Search for any gif by keywords and save them to your database!
-Organize them into favorite categories
-Feel free to change categories or remove them from your favorites
+* Search for any gif by keywords and save them to your database!
+* Organize them into favorite categories
+* Feel free to change categories or remove them from your favorites
 
 
 ## Create Database and Tables
@@ -20,8 +20,8 @@ Feel free to follow the databse schema in database.sql file if you'd like to cod
 * Navigate to `localhost:3000`
 
 ## Developer Tools Needed
-react
-node
-postgres
-giphy api key
+* react
+* node
+* postgres
+* giphy api key
 -- run npm install for additonal tools such as redux and express
